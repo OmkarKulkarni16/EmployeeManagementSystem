@@ -20,6 +20,8 @@ public class EmployeeController {
         Employee response = restTemplate.getForObject(baseUrl+"getEmployeeBy/"+id, Employee.class);
         return response;
     }
+    
+//     This is for testing purpose
     @GetMapping("/hello")
     public String hello(){
         return "hello";
