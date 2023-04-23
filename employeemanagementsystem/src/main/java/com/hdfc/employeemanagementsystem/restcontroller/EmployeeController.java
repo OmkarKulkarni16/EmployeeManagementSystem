@@ -33,7 +33,7 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
     }
 
-
+//     Adding data to database
     @PostMapping("/addEmployee")
     public  ResponseEntity<String> addEmployee(@RequestBody EmployeeDto employeeDto){
            Employee employee = employeeService.addCustomer(employeeDto);
