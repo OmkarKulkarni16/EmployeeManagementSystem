@@ -37,10 +37,19 @@ public class EmployeeController {
         return employeeService.getAllEmployee();
     }
 
+<<<<<<< HEAD
 
 //    @PostMapping("/addEmployee")
 //    public  ResponseEntity<String> addEmployee(@RequestBody EmployeeDto employeeDto){
 //           Employee employee = employeeService.addCustomer(employeeDto);
 //           return ResponseEntity.status(HttpStatus.CREATED).body("Employee Added Successfully");
 //    }
+=======
+//     Adding data to database
+    @PostMapping("/addEmployee")
+    public  ResponseEntity<String> addEmployee(@RequestBody EmployeeDto employeeDto){
+           Employee employee = employeeService.addCustomer(employeeDto);
+           return ResponseEntity.status(HttpStatus.CREATED).body("Employee Added Successfully");
+    }
+>>>>>>> fc41f1bedb096c321ef835304e2af5dc8bfd600a
 }
