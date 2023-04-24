@@ -1,7 +1,5 @@
 package com.hdfc.employeemanagementsystem.entity;
 
-import com.hdfc.employeemanagementsystem.config.AesEncryptor;
-
 import javax.persistence.*;
 
 @Entity
@@ -18,7 +16,7 @@ public class Employee {
     private String employeeName;
 
     @Column(name = "employeedateofbirth")
-    @Convert(converter = AesEncryptor.class)
+//    @Convert(converter = AesEncryptor.class)
     private String employeeDateOfBirth;
 
 

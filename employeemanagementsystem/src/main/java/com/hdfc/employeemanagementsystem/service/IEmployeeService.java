@@ -11,4 +11,6 @@ public interface IEmployeeService {
     Employee getEmployeeById(int id) throws EmployeeNotFoundException;
     List<Employee> getAllEmployee();
     Employee addCustomer(EmployeeDto employeeDto);
+
+    public String encrypt(String data);
 }

@@ -1,5 +1,6 @@
 package com.hdfc.employeemanagementsystem.service;
 
+import com.hdfc.employeemanagementsystem.config.Aes;
 import com.hdfc.employeemanagementsystem.dto.EmployeeDto;
 import com.hdfc.employeemanagementsystem.entity.Employee;
 import com.hdfc.employeemanagementsystem.exceptions.EmployeeNotFoundException;
@@ -13,6 +14,7 @@ import java.util.List;
 
 @Service
 public class EmployeeServiceImplementation implements IEmployeeService {
+    private static final String AES_KEY = "TOKEN_SECURITY_MOGLIX_AES_KEY_IN_JWT";
 
     Logger log = LoggerFactory.getLogger(this.getClass());
    @Autowired
@@ -36,6 +38,12 @@ public class EmployeeServiceImplementation implements IEmployeeService {
         employee.setEmployeeName(employeeDto.getEmployeeName());
         employee.setEmployeeDateOfBirth(employeeDto.getEmployeeDateOfBirth());
         return employeeRepository.save(employee);
+    }
+
+    @Override
+    public String encrypt(String data) {
+        Aes aes = new Aes(AES_KEY);
+        return aes.encrypt(data);
     }
 
 
