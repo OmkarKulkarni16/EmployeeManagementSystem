@@ -1,4 +1,4 @@
-package com.hdfc.employeemanagementsystemwebclient.entity;
+package com.hdfc.employeemanagementsystemwebclient.dto;
 
 import lombok.*;
 

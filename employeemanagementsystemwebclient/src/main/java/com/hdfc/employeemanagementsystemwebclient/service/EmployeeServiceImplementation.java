@@ -1,6 +1,6 @@
 package com.hdfc.employeemanagementsystemwebclient.service;
 
-import com.hdfc.employeemanagementsystemwebclient.entity.Aes;
+import com.hdfc.employeemanagementsystemwebclient.dto.Aes;
 import org.springframework.stereotype.Service;
 
 @Service

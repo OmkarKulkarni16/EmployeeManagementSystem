@@ -1,4 +1,4 @@
-package com.hdfc.employeemanagementsystemwebclient.entity;
+package com.hdfc.employeemanagementsystemwebclient.dto;
 
 import javax.crypto.Cipher;
 import javax.crypto.spec.SecretKeySpec;

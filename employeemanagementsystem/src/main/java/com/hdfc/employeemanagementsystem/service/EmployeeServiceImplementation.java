@@ -1,7 +1,6 @@
 package com.hdfc.employeemanagementsystem.service;
 
 import com.hdfc.employeemanagementsystem.config.Aes;
-import com.hdfc.employeemanagementsystem.dto.EmployeeDto;
 import com.hdfc.employeemanagementsystem.entity.Employee;
 import com.hdfc.employeemanagementsystem.exceptions.EmployeeNotFoundException;
 import com.hdfc.employeemanagementsystem.repository.IEmployeeRepository;
@@ -29,15 +28,6 @@ public class EmployeeServiceImplementation implements IEmployeeService {
     public List<Employee> getAllEmployee() {
         log.info("Got Sucessfully".repeat(50));
         return employeeRepository.findAll();
-    }
-
-    @Override
-    public Employee addCustomer(EmployeeDto employeeDto) {
-        Employee employee = new Employee();
-        employee.setEmployeeId(employeeDto.getEmployeeId());
-        employee.setEmployeeName(employeeDto.getEmployeeName());
-        employee.setEmployeeDateOfBirth(employeeDto.getEmployeeDateOfBirth());
-        return employeeRepository.save(employee);
     }
 
     @Override
